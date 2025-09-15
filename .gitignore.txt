@@ -1,0 +1,12 @@
+*.log
+*.html
+*.xml
+*.png
+/.venv/*
+!/.venv/empty.txt
+/.venv
+/output/
+/results
+/reports
+/allure-report
+/venv
