@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.9 on win32)" generated="2025-09-15T11:01:50.896487" rpa="false" schemaversion="5">
+<suite id="s1" name="Common" source="C:\Robot_Tests\Tests\Common.robot">
+<test id="s1-t1" name="Open Facebook And Search" line="13">
+<kw name="Open Facebook And Fill Email">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-15T11:01:52.743360" level="INFO">Opening browser 'Chrome' to base url 'https://www.facebook.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-15T11:01:52.743360" elapsed="4.739226"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-15T11:01:57.482586" elapsed="0.087408"/>
+</kw>
+<kw name="Read First Data Row" owner="ExcelLibrairie">
+<msg time="2025-09-15T11:01:57.604019" level="INFO">${row} = {'LOGIN': 'hafelja31@gmail.com', 'PASSWORD': '55991992Hafsa'}</msg>
+<var>${row}</var>
+<arg>${data}</arg>
+<arg>${sheet_name}</arg>
+<doc>Reads the first data row (after the header) from the Excel sheet and returns it as a dictionary.</doc>
+<status status="PASS" start="2025-09-15T11:01:57.569994" elapsed="0.034025"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-15T11:01:57.604019" level="INFO">{'LOGIN': 'hafelja31@gmail.com', 'PASSWORD': '55991992Hafsa'}</msg>
+<arg>${row}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-15T11:01:57.604019" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-15T11:01:57.604019" level="INFO">Typing text 'hafelja31@gmail.com' into text field 'xpath=//input[@id='email']'.</msg>
+<arg>xpath=//input[@id='email']</arg>
+<arg>${row["LOGIN"]}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-15T11:01:57.604019" elapsed="0.244184"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-15T11:01:57.848203" level="INFO">Typing text '55991992Hafsa' into text field 'xpath=//input[@id='pass']'.</msg>
+<arg>xpath=//input[@id='pass']</arg>
+<arg>${row["PASSWORD"]}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-15T11:01:57.848203" elapsed="0.247620"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-15T11:01:58.097430" level="INFO">Clicking element 'xpath=//Button[@data-testid='royal-login-button']'.</msg>
+<arg>xpath=//Button[@data-testid='royal-login-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-15T11:01:58.097430" elapsed="0.174310"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-15T11:02:58.272039" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-15T11:01:58.271740" elapsed="60.000299"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-15T11:02:58.507812" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-15T11:02:58.272039" elapsed="0.235773"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-15T11:02:58.507812" elapsed="2.545401"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2025-09-15T11:01:52.743360" elapsed="68.309853"/>
+</kw>
+<status status="PASS" start="2025-09-15T11:01:52.743360" elapsed="68.309853"/>
+</test>
+<status status="PASS" start="2025-09-15T11:01:50.913247" elapsed="70.139966"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Common">Common</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
